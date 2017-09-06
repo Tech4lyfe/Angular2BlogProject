@@ -7,16 +7,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var CommentsComponent = (function () {
+    function CommentsComponent() {
+        this.comments = 'CommentsPage';
     }
-    return AppComponent;
+    return CommentsComponent;
 }());
-AppComponent = __decorate([
+CommentsComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.component.html',
+        selector: 'comments',
+        template: '<h1>{{comments}}</h1>'
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], CommentsComponent);
+exports.CommentsComponent = CommentsComponent;
+//# sourceMappingURL=comments.component.js.map

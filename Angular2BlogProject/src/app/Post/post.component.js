@@ -7,21 +7,21 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var contacts_model_1 = require("../Models/contacts.model");
-var ContactComponent = (function () {
-    function ContactComponent() {
-        this.model = new contacts_model_1.Contact("", "", "");
+var post_model_1 = require("../Models/post.model");
+var PostComponent = (function () {
+    function PostComponent() {
+        this.model = new post_model_1.Post("", "", "");
     }
-    ContactComponent.prototype.submit = function (form) {
-        alert("Message has been sent successfully");
+    PostComponent.prototype.submit = function (form) {
+        alert("Post Successfully");
         form.resetForm();
     };
-    return ContactComponent;
+    return PostComponent;
 }());
-ContactComponent = __decorate([
+PostComponent = __decorate([
     core_1.Component({
-        templateUrl: 'app/Contact/contact.html'
+        templateUrl: 'app/Post/post.html'
     })
-], ContactComponent);
-exports.ContactComponent = ContactComponent;
-//# sourceMappingURL=contact.component.js.map
+], PostComponent);
+exports.PostComponent = PostComponent;
+//# sourceMappingURL=post.component.js.map

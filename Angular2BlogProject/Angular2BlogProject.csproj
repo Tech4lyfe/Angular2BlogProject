@@ -230,6 +230,7 @@
     <Content Include="src\app\About\about.html" />
     <Content Include="src\app\Contact\contact.html" />
     <Content Include="src\app\Navbar\navbar.html" />
+    <Content Include="src\app\Post\post.html" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
@@ -255,7 +256,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -271,6 +271,7 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\app\Models\contacts.model.ts" />
     <TypeScriptCompile Include="src\app\About\about.component.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
@@ -278,7 +279,9 @@
     <TypeScriptCompile Include="src\app\Comments\comments.component.ts" />
     <TypeScriptCompile Include="src\app\Contact\contact.component.ts" />
     <TypeScriptCompile Include="src\app\Home\home.component.ts" />
+    <TypeScriptCompile Include="src\app\Models\post.model.ts" />
     <TypeScriptCompile Include="src\app\Navbar\navbar.component.ts" />
+    <TypeScriptCompile Include="src\app\Post\post.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>

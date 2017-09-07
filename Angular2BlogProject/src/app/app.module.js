@@ -9,12 +9,14 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
 var router_1 = require("@angular/router");
+var forms_1 = require("@angular/forms");
 var app_component_1 = require("./app.component");
 var comments_component_1 = require("./Comments/comments.component");
 var navbar_component_1 = require("./Navbar/navbar.component");
 var home_component_1 = require("./Home/home.component");
 var about_component_1 = require("./About/about.component");
 var contact_component_1 = require("./Contact/contact.component");
+var post_component_1 = require("./Post/post.component");
 var appRoutes = [
     {
         path: 'home',
@@ -28,19 +30,15 @@ var appRoutes = [
         path: 'contact',
         component: contact_component_1.ContactComponent
     },
-    //{
-    //    path: 'employee/:EmployeeId',
-    //    component: EmployeeComponent
-    //},
+    {
+        path: 'newpost',
+        component: post_component_1.PostComponent
+    },
     {
         path: '',
         redirectTo: '/home',
         pathMatch: 'full'
     }
-    //{
-    //    path: "**",
-    //    component: PageNotFoundedComponent
-    //}
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -49,8 +47,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes, { useHash: true })],
-        declarations: [app_component_1.AppComponent, comments_component_1.CommentsComponent, navbar_component_1.NavbarComponent, home_component_1.HomeComponent, about_component_1.AboutComponent, contact_component_1.ContactComponent],
+        imports: [platform_browser_1.BrowserModule, router_1.RouterModule.forRoot(appRoutes, { useHash: true }), forms_1.FormsModule],
+        declarations: [app_component_1.AppComponent, comments_component_1.CommentsComponent, navbar_component_1.NavbarComponent, home_component_1.HomeComponent, about_component_1.AboutComponent, contact_component_1.ContactComponent, post_component_1.PostComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

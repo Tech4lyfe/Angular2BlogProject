@@ -1,28 +1,38 @@
 ﻿
 
 <form #form="ngForm" novalidate>
-    <div class="form-group" [class.has-error]="name.invalid && name.touched">
-        <label class="control-label">Name:</label>
-        <input type="text" class="form-control" name="name" #name="ngModel" [(ngModel)]="model.name" required />
-        <div *ngIf="name.invalid && name.touched" class="alert alert-danger">
+    <div class="form-group" [class.has-error]="Author.invalid && Author.touched">
+        <label class="control-label">Author:</label>
+        <input type="text" class="form-control" name="Author" #Author="ngModel" [(ngModel)]="model.Author" required />
+        <div *ngIf="Author.invalid && Author.touched" class="alert alert-danger">
             Please enter a name
         </div>
     </div>
 
-    <div class="form-group" [class.has-error]="title.invalid && title.touched">
+    <div class="form-group" [class.has-error]="Title.invalid && Title.touched">
         <label class="control-label">Title:</label>
-        <input type="text" class="form-control" name="title" #title="ngModel" [(ngModel)]="model.title" required />
-        <div *ngIf="title.invalid && title.touched" class="alert alert-danger">
+        <input type="text" class="form-control" name="Title" #Title="ngModel" [(ngModel)]="model.Title" required />
+        <div *ngIf="Title.invalid && Title.touched" class="alert alert-danger">
             Please enter a title
         </div>
     </div>
 
-    <div class="form-group" [class.has-error]="content.invalid && content.touched">
+    <div class="form-group" [class.has-error]="Content.invalid && Content.touched">
         <label class="control-label">Content:</label>
-        <textarea type="text" class="form-control" rows="5" name="content" #content="ngModel" [(ngModel)]="model.content" required></textarea>
-        <div *ngIf="content.invalid && content.touched" class="alert alert-danger">
+        <textarea type="text" class="form-control" rows="5" name="Content" #Content="ngModel" [(ngModel)]="model.Content" required></textarea>
+        <div *ngIf="Content.invalid && Content.touched" class="alert alert-danger">
             Please enter content
         </div>
     </div>
-    <input class="btn btn-primary" type="button" [disabled]="form.invalid" (click)="submit(form)" value="submit" />
+    <input class="btn btn-primary" type="button" [disabled]="form.invalid" (click)="submit(model); form.reset()" value="submit" />
 </form>
+
+<ng-container>
+    <div *ngFor="let post of posts">
+        <h3> {{post.Title}}</h3>
+        <p>{{post.Content}}</p>
+        <p> Author: {{post.Author}}</p>
+        <p> Created On: {{post.CreatedDate | date : format : shortDate}}</p>
+        <button type="submit" (click)="deletePost(post)" class="btn btn-danger">Delete</button>
+    </div>
+</ng-container>

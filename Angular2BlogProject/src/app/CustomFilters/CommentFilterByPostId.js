@@ -7,16 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var HomeComponent = (function () {
-    function HomeComponent() {
+var FilterCommentByPostId = (function () {
+    function FilterCommentByPostId() {
     }
-    return HomeComponent;
+    FilterCommentByPostId.prototype.transform = function (items, PostId) {
+        return items.filter(function (item) { return item.PostId === PostId; });
+    };
+    return FilterCommentByPostId;
 }());
-HomeComponent = __decorate([
-    core_1.Component({
-        selector: 'Home',
-        templateUrl: 'app/Home/home.html'
+FilterCommentByPostId = __decorate([
+    core_1.Pipe({
+        name: 'filterByPostId'
     })
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+], FilterCommentByPostId);
+exports.FilterCommentByPostId = FilterCommentByPostId;
+//# sourceMappingURL=CommentFilterByPostId.js.map

@@ -7,16 +7,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var HomeComponent = (function () {
-    function HomeComponent() {
+var EmitterService = (function () {
+    function EmitterService() {
     }
-    return HomeComponent;
+    // Set a new event in the store with a given ID
+    // as key
+    EmitterService.get = function (ID) {
+        if (!this._emitters[ID])
+            this._emitters[ID] = new core_1.EventEmitter();
+        return this._emitters[ID];
+    };
+    return EmitterService;
 }());
-HomeComponent = __decorate([
-    core_1.Component({
-        selector: 'Home',
-        templateUrl: 'app/Home/home.html'
-    })
-], HomeComponent);
-exports.HomeComponent = HomeComponent;
-//# sourceMappingURL=home.component.js.map
+// Event store
+EmitterService._emitters = {};
+EmitterService = __decorate([
+    core_1.Injectable()
+], EmitterService);
+exports.EmitterService = EmitterService;
+//# sourceMappingURL=emitter.service.js.map

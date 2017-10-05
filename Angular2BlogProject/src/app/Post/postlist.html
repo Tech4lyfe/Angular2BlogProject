@@ -1,0 +1,4 @@
+﻿<ng-container *ngFor="let post of posts" >
+    
+    <p><a [routerLink]="['/post', post.PostId]">{{post.Title}}</a></p>
+</ng-container>

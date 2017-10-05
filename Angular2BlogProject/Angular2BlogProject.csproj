@@ -189,13 +189,13 @@
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\BlogDetails.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Areas\HelpPage\Views\Web.config" />
     <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
@@ -220,17 +220,30 @@
     </Content>
     <Content Include="package.json" />
     <Content Include="bs-config.json" />
-    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Scripts\jquery-1.10.2.js" />
-    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="src\app\app.component.html" />
     <Content Include="src\app\About\about.html" />
     <Content Include="src\app\Contact\contact.html" />
+    <Content Include="src\app\Home\home.html" />
     <Content Include="src\app\Navbar\navbar.html" />
     <Content Include="src\app\Post\post.html" />
+    <Content Include="src\app\Post\postlist.html" />
+    <Content Include="src\app\SinglePost\singlepost.html" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\styles.css" />
@@ -258,19 +271,12 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="src\app\CustomFilters\CommentFilterByPostId.ts" />
+    <TypeScriptCompile Include="src\app\Models\comment.model.ts" />
     <TypeScriptCompile Include="src\app\Models\contacts.model.ts" />
     <TypeScriptCompile Include="src\app\About\about.component.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
@@ -282,6 +288,11 @@
     <TypeScriptCompile Include="src\app\Models\post.model.ts" />
     <TypeScriptCompile Include="src\app\Navbar\navbar.component.ts" />
     <TypeScriptCompile Include="src\app\Post\post.component.ts" />
+    <TypeScriptCompile Include="src\app\Post\postlist.component.ts" />
+    <TypeScriptCompile Include="src\app\Services\comment.service.ts" />
+    <TypeScriptCompile Include="src\app\Services\emitter.service.ts" />
+    <TypeScriptCompile Include="src\app\Services\post.service.ts" />
+    <TypeScriptCompile Include="src\app\SinglePost\singlepost.component.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>

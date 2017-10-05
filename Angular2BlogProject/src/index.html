@@ -1,31 +1,32 @@
 ﻿<!DOCTYPE html>
 <html>
-  <head>
-    <title>Angular QuickStart</title>
-    <base href="/src/">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="styles.css">
-      <script src="../Scripts/jquery-1.10.2.min.js"></script>
-      <script src="../Scripts/bootstrap.min.js"></script>
-      <link href="../Content/bootstrap.min.css" rel="stylesheet" />
-      <link href="../Content/BlogDetails.css" rel="stylesheet" />
-    <!-- Polyfill(s) for older browsers -->
-    <script src="/node_modules/core-js/client/shim.min.js"></script>
 
-    <script src="/node_modules/zone.js/dist/zone.js"></script>
-    <script src="/node_modules/systemjs/dist/system.src.js"></script>
+    <header>
+        <title>Angular QuickStart</title>
+        <base href="/src/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
 
-    <script src="systemjs.config.js"></script>
-    <script>
-      System.import('main.js').catch(function(err){ console.error(err); });
-    </script>
-  </head>
+        <script src="../Scripts/jquery-1.9.1.min.js"></script>
+
+        <script src="../Scripts/bootstrap.min.js"></script>
+        <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="../Content/BlogDetails.css" rel="stylesheet" />
+        <!-- Polyfill(s) for older browsers -->
+        <script src="/node_modules/core-js/client/shim.min.js"></script>
+        <script src="/node_modules/zone.js/dist/zone.js"></script>
+        <script src="/node_modules/systemjs/dist/system.src.js"></script>
+        <script src="systemjs.config.js"></script>
+        <script>
+            System.import('main.js').catch(function (err) { console.error(err); });
+        </script>
+    </header>
+
 
 <body>
-    <div class="container">
-
-        <my-app>Loading AppComponent content here ...</my-app>
-    </div>
+<div class="container">
+    <my-app>Loading AppComponent content here ...</my-app>
+</div>
 </body>
 </html>

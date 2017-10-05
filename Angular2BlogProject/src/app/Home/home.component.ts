@@ -3,10 +3,8 @@
 @
 Component({
     selector: 'Home',
-    template: "<h1>{{homeMessage}}</h1>"
+    templateUrl: 'app/Home/home.html'
 })
 
 export class HomeComponent {
-
-    homeMessage: string = "THIS IS HOME PAGE!!";
 }
